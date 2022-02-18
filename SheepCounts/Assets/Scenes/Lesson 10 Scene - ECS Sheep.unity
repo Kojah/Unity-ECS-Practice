@@ -223,8 +223,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1872194001}
-  - component: {fileID: 1872194000}
-  - component: {fileID: 1872193999}
   - component: {fileID: 1872194002}
   m_Layer: 0
   m_Name: SpawnManager
@@ -233,32 +231,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1872193999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872193998}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 074bdd8c9e162f44aa6261dc93bbfc1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sheepPrefab: {fileID: 2026991542, guid: ed57f85e128444af2aecca62ff336fea, type: 3}
---- !u!114 &1872194000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872193998}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf0cb676a719fed4798cbf1ed75d0fac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sheepPrefab: {fileID: 2026991542, guid: ed57f85e128444af2aecca62ff336fea, type: 3}
 --- !u!4 &1872194001
 Transform:
   m_ObjectHideFlags: 0
