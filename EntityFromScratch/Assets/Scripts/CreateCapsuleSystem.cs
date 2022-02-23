@@ -13,27 +13,37 @@ public class CreateCapsuleSystem : JobComponentSystem
     {
         base.OnCreate();
 
-        var instance = EntityManager.CreateEntity(
-            ComponentType.ReadOnly<LocalToWorld>(),
-            //ComponentType.ReadWrite<Translation>(),
-            //ComponentType.ReadWrite<Rotation>(),
-            ComponentType.ReadOnly<RenderMesh>());
-
-        //EntityManager.SetComponentData(instance, new Translation { Value = new float3(0, 0, 0) });
-        //EntityManager.SetComponentData(instance, new Rotation { Value = new quaternion(0, 0, 0, 0) });
-        //In order to exist in the world, the entity needs a LocalToWorld matrix representing the rotation and translation
-        EntityManager.SetComponentData(instance, new LocalToWorld
+        for (int i = 0; i < 100; i++)
         {
-            Value = new float4x4(rotation: quaternion.identity, translation: new float3(0, 0, 0))
-        });
+            var instance = EntityManager.CreateEntity(
+                ComponentType.ReadOnly<LocalToWorld>(),
+                ComponentType.ReadWrite<Translation>(),
+                ComponentType.ReadWrite<Rotation>(),
+                ComponentType.ReadWrite<NonUniformScale>(),
+                ComponentType.ReadOnly<RenderMesh>());
 
-        var rHolder = Resources.Load<GameObject>("ResourceHolder").GetComponent<ResourceHolder>();
+            float3 position = new float3(UnityEngine.Random.Range(-50, 50), 0, UnityEngine.Random.Range(-50, 50));
+            float scale = UnityEngine.Random.Range(100, 500);
+            //In order to exist in the world, the entity needs a LocalToWorld matrix representing the rotation and translation
+            EntityManager.SetComponentData(instance, new LocalToWorld
+            {
+                Value = new float4x4(rotation: quaternion.identity, translation: position)
+            });
+            EntityManager.SetComponentData(instance, new Translation { Value = position });
+            EntityManager.SetComponentData(instance, new Rotation { Value = new quaternion(0, 0, 0, 0) });
+            EntityManager.SetComponentData(instance, new NonUniformScale
+            {
+                Value = new float3(scale, scale, scale)
+            });
 
-        EntityManager.SetSharedComponentData(instance, new RenderMesh
-        {
-            mesh = rHolder.theMesh,
-            material = rHolder.theMaterial
-        });
+            var rHolder = Resources.Load<GameObject>("ResourceHolder").GetComponent<ResourceHolder>();
+
+            EntityManager.SetSharedComponentData(instance, new RenderMesh
+            {
+                mesh = rHolder.theMesh,
+                material = rHolder.theMaterial
+            });
+        }
     }
 
     protected override JobHandle OnUpdate(JobHandle inputDeps)
