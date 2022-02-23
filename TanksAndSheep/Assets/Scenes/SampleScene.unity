@@ -1191,7 +1191,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 5.521e-42, y: 1.01e-43, z: 980710.94, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 2.3509887e-38, z: 4.1543445e+34, w: 1.2325955e-32}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1705,6 +1705,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sheepTextField: {fileID: 4391594}
   tonkTextField: {fileID: 157245573}
+  tonk: {fileID: 4223240698900514357, guid: 532eb4b8e8c1e40eebf9ac8a9781d5e2, type: 3}
+  palmTree: {fileID: 2208296925476975567, guid: 82c0d6550d2b3b041aaa0d350490c95f,
+    type: 3}
 --- !u!1 &1939442585
 GameObject:
   m_ObjectHideFlags: 0
