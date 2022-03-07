@@ -11,6 +11,8 @@ public class MoveSystem : JobComponentSystem
     protected override JobHandle OnUpdate(JobHandle inputDeps)
     {
         float deltaTime = Time.DeltaTime;
+        float speed = 0.5f;
+        float rotationalSpeed = 0.5f;
         float3 targetLocation = new float3(0, 0, 0);
         var jobHandle = Entities
                .WithName("MoveSystem")
@@ -19,8 +21,9 @@ public class MoveSystem : JobComponentSystem
                    float3 heading = targetLocation - position.Value;
                    heading.y = 0;
 
-                   rotation.Value = quaternion.LookRotation(heading, math.up());
-                   position.Value += deltaTime * 0.5f * math.forward(rotation.Value);
+                   quaternion targetDirection = quaternion.LookRotation(heading, math.up());
+                   rotation.Value = math.slerp(rotation.Value, targetDirection, deltaTime * rotationalSpeed);
+                   position.Value += deltaTime * speed * math.forward(rotation.Value);
                })
                .Schedule(inputDeps);
 
