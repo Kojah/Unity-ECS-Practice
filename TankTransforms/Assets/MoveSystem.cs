@@ -16,7 +16,11 @@ public class MoveSystem : JobComponentSystem
                .WithName("MoveSystem")
                .ForEach((ref Translation position, ref Rotation rotation, ref TankData tankData) =>
                {
-                   position.Value += deltaTime * 0.5f * (targetLocation - position.Value);
+                   float3 heading = targetLocation - position.Value;
+                   heading.y = 0;
+
+                   rotation.Value = quaternion.LookRotation(heading, math.up());
+                   position.Value += deltaTime * 0.5f * math.forward(rotation.Value);
                })
                .Schedule(inputDeps);
 
