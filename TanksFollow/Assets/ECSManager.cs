@@ -28,6 +28,10 @@ public class ECSManager : MonoBehaviour
 
             var q = Quaternion.Euler(new Vector3(0, 45, 0));
             manager.SetComponentData(instance, new Rotation { Value = new quaternion(q.x,q.y,q.z,q.w) });
+
+            float speed = UnityEngine.Random.Range(2, 8);
+            float rotSpeed = UnityEngine.Random.Range(1, 10);
+            manager.SetComponentData(instance, new TankData { speed = speed, rotSpeed = rotSpeed });
         }
 
     }
