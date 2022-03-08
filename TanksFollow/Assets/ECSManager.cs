@@ -31,7 +31,8 @@ public class ECSManager : MonoBehaviour
 
             float speed = UnityEngine.Random.Range(2, 8);
             float rotSpeed = UnityEngine.Random.Range(1, 10);
-            manager.SetComponentData(instance, new TankData { speed = speed, rotSpeed = rotSpeed });
+            int startingWaypoint = UnityEngine.Random.Range(0, GameDataManager.instance.waypoints.Length);
+            manager.SetComponentData(instance, new TankData { speed = speed, rotSpeed = rotSpeed, currentWaypoint = startingWaypoint });
         }
 
     }
