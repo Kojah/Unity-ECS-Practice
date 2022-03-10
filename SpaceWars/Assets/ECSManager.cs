@@ -24,7 +24,7 @@ public class ECSManager : MonoBehaviour
             float x = UnityEngine.Random.Range(-300, 300);
             float z = UnityEngine.Random.Range(-300, 300);
             float y = UnityEngine.Random.Range(-300, 300);
-            var position = transform.TransformPoint(new float3(x, 0, z));
+            var position = transform.TransformPoint(new float3(x, y, z));
             manager.SetComponentData(instance, new Translation { Value = position });
 
             var q = Quaternion.Euler(new Vector3(0, 45, 0));

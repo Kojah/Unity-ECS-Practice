@@ -209,7 +209,7 @@ Transform:
   m_GameObject: {fileID: 147265658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -156.9, y: 223, z: -361}
-  m_LocalScale: {x: 8.26598, y: 8.26598, z: 8.26598}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -302,7 +302,7 @@ Transform:
   m_GameObject: {fileID: 286196141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -374, y: 150, z: -260}
-  m_LocalScale: {x: 8.26598, y: 8.26598, z: 8.26598}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -381,7 +381,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0.0000008142067, y: 6.323129e-19, z: 6337696, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -520,8 +520,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.026135102, y: 0.9585025, z: 0.09345157, w: -0.2680611}
-  m_LocalPosition: {x: 13.051284, y: 3.9252932, z: 23.053339}
+  m_LocalRotation: {x: -0.044202734, y: 0.89958465, z: -0.0937223, w: -0.42427546}
+  m_LocalPosition: {x: 253.21173, y: 150.67168, z: 160.29071}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -664,7 +664,7 @@ Transform:
   m_GameObject: {fileID: 1560750071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.26598, y: 8.26598, z: 8.26598}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -757,7 +757,7 @@ Transform:
   m_GameObject: {fileID: 1784193134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 34.3, z: -89}
-  m_LocalScale: {x: 8.26598, y: 8.26598, z: 8.26598}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
