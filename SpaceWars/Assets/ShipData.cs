@@ -7,4 +7,5 @@ public struct ShipData : IComponentData
     public float rotationSpeed;
     public int currentWP;
     public bool approach;
+    public Entity bulletPrefab;
 }
