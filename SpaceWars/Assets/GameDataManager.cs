@@ -9,6 +9,7 @@ public class GameDataManager : MonoBehaviour
     public static GameDataManager instance;
     public Transform[] waypoints;
     public float3[] wps;
+    public float3[] gunLocations;
 
     void Awake()
     {
