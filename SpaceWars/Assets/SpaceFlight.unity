@@ -564,6 +564,7 @@ MonoBehaviour:
   - {fileID: 147265662}
   - {fileID: 286196145}
   wps: []
+  gunLocations: []
 --- !u!4 &1552116280
 Transform:
   m_ObjectHideFlags: 0
@@ -771,38 +772,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 224217231, guid: ea769d329dd5e43ce92729fda9cf7c3a, type: 3}
-      propertyPath: m_TagString
-      value: BulletSpawnPoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 224217234, guid: ea769d329dd5e43ce92729fda9cf7c3a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1077830796, guid: ea769d329dd5e43ce92729fda9cf7c3a, type: 3}
-      propertyPath: m_TagString
-      value: BulletSpawnPoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 1077830799, guid: ea769d329dd5e43ce92729fda9cf7c3a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1575797975, guid: ea769d329dd5e43ce92729fda9cf7c3a, type: 3}
-      propertyPath: m_TagString
-      value: BulletSpawnPoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 1575797978, guid: ea769d329dd5e43ce92729fda9cf7c3a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1882783822, guid: ea769d329dd5e43ce92729fda9cf7c3a, type: 3}
-      propertyPath: m_TagString
-      value: BulletSpawnPoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 1882783825, guid: ea769d329dd5e43ce92729fda9cf7c3a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1332995063531719171, guid: ea769d329dd5e43ce92729fda9cf7c3a,
         type: 3}
       propertyPath: m_Name

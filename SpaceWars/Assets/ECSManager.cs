@@ -34,7 +34,8 @@ public class ECSManager : MonoBehaviour
 
         for(int i = 0; i < GameDataManager.instance.gunLocations.Length; i++)
         {
-            GameDataManager.instance.gunLocations[i] = bulletSpawnPoints[i].transform.position;
+            GameDataManager.instance.gunLocations[i] = bulletSpawnPoints[i].transform.
+                TransformPoint(bulletSpawnPoints[i].transform.position);
         }
 
 
