@@ -17,6 +17,7 @@ public class ShootSystem : JobComponentSystem
                     var instance = EntityManager.Instantiate(shipData.bulletPrefab);
                     EntityManager.SetComponentData(instance, new Translation { Value = position.Value + math.mul(rotation.Value, pos) });
                     EntityManager.SetComponentData(instance, new Rotation { Value = rotation.Value });
+                    EntityManager.SetComponentData(instance, new LifeTimeData { lifeLeft = 1 });
                 }
             }).Run();
 
