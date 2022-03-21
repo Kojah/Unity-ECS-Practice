@@ -26,6 +26,13 @@ public class MoveBulletSystem : JobComponentSystem
             if(distanceToTarget < 27)
             {
                 lifeTimeData.lifeLeft = 0;
+                if(UnityEngine.Random.Range(0, 1000) <= 50)
+                {
+                    var instance = EntityManager.Instantiate(bulletData.explosionPrefab);
+                    EntityManager.SetComponentData(instance, new Translation { Value = position.Value });
+                    EntityManager.SetComponentData(instance, new Rotation { Value = rotation.Value });
+                    EntityManager.SetComponentData(instance, new LifeTimeData { lifeLeft = 0.5f });
+                }
             }
         }).Run();
 
