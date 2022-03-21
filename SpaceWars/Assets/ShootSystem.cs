@@ -23,6 +23,7 @@ public class ShootSystem : JobComponentSystem
                         EntityManager.SetComponentData(instance, new Translation { Value = position.Value + math.mul(rotation.Value, pos) });
                         EntityManager.SetComponentData(instance, new Rotation { Value = rotation.Value });
                         EntityManager.SetComponentData(instance, new LifeTimeData { lifeLeft = 1 });
+                        EntityManager.SetComponentData(instance, new BulletData { waypoint = shipData.currentWP });
                     }
                 }
             }).Run();
